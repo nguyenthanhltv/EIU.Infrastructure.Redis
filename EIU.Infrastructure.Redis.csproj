@@ -1,0 +1,42 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <!-- 👇 Thông tin hiển thị trên NuGet -->
+    <PackageId>EIU.Infrastructure.Redis</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>YourName</Authors>
+    <Company>YourCompany</Company>
+    <Description>Redis caching library with attribute-based configuration and interception support for ASP.NET Core.</Description>
+    <PackageTags>redis cache attribute interceptor aspnetcore</PackageTags>
+    <RepositoryUrl>https://github.com/yourusername/EIU.Infrastructure.Redis</RepositoryUrl>
+    <!-- 👇 Thêm license -->
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <!-- 👇 Thêm Readme -->
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <!-- 👇 Hiển thị biểu tượng (tùy chọn) -->
+    <PackageIcon>icon.png</PackageIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- Redis -->
+    <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="8.0.1" />
+    <PackageReference Include="StackExchange.Redis" Version="2.7.33" />
+    <!-- Dependency Injection -->
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="8.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="8.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Options" Version="8.0.1" />
+    <!-- ASP.NET Core Filters -->
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
+    <!-- JSON -->
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <!-- Interceptor (Scrutor) -->
+    <PackageReference Include="Scrutor" Version="5.0.0" />
+
+    <PackageReference Include="Castle.Core" Version="5.1.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="README.md" Pack="true" PackagePath="\" />
+    <None Include="icon.png" Pack="true" PackagePath="\" />
+  </ItemGroup>
+</Project>
